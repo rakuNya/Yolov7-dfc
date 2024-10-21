@@ -1,0 +1,11 @@
+
+# custom dataset
+train: /root/autodl-tmp/kitti/images/train
+val: /root/autodl-tmp/kitti/images/val
+test: /root/autodl-tmp/kitti/images/test
+
+# number of classes
+nc: 6
+
+# class names
+names: ['Car', 'Cyclist', 'Truck', 'Van', 'Pedestrian', 'Tram']
