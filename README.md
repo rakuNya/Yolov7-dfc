@@ -8,8 +8,8 @@ For certain modules and network structures in the improved model, you can find t
 
 The model has been tested and confirmed to run successfully in the following environment:
 
-PyTorch 1.11.0
-Python 3.8
-CUDA 11.3
+PyTorch 1.11.0, 
+Python 3.8, 
+CUDA 11.3, 
 
 For other virtual environments or hardware configurations with similar versions, there should generally be no compatibility issues. Please feel free to use it.
