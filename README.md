@@ -21,6 +21,11 @@ Implementation of paper - [YOLOv7: Trainable bag-of-freebies sets new state-of-t
 The result above is by UA-DETRAC dataset.
 
 Our trained weight can be found in yolov7-dfc/improvedModel 
+
+Dataset: https://openxlab.org.cn/datasets/OpenDataLab/Visdrone_DET, 
+
+https://www.albany.edu/cnse/research/computer-vision-machine-learning-lab - tab-projects.
+
 ## Installation
 The model has been tested and confirmed to run successfully in the following environment:
 
