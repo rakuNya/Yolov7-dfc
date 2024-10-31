@@ -1,6 +1,6 @@
 # YOLOv7-dfc
 
-This improved method for vehicle detection is based on the YOLOv7-tiny, It can be used in the same way as YOLOv7.
+This improved method for vehicle detection is based on the YOLOv7-tiny, it can be used in the same way as YOLOv7.
 
 Implementation of paper - [YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors](https://arxiv.org/abs/2207.02696)
 
