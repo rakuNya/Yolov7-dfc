@@ -1,8 +1,8 @@
 
 # custom dataset
-train: /root/autodl-tmp/visdrone/images/train
-val: /root/autodl-tmp/visdrone/images/val
-test: /root/autodl-tmp/visdrone/images/test
+train: /visdrone/images/train
+val: /visdrone/images/val
+test: /visdrone/images/test
 
 # number of classes
 nc: 10

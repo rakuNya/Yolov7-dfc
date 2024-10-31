@@ -1,8 +1,8 @@
 
 # custom dataset
-train: /root/autodl-tmp/real UA-DETRAC/images/train
-val: /root/autodl-tmp/real UA-DETRAC/images/val
-test: /root/autodl-tmp/real UA-DETRAC/images/val
+train: /UA-DETRAC/images/train
+val: /UA-DETRAC/images/val
+test: /UA-DETRAC/images/val
 
 # number of classes
 nc: 4
