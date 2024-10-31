@@ -42,7 +42,7 @@ parser.add_argument('--cfg', type=str, default='cfg/deploy/dfc-nn.yaml', help='m
 parser.add_argument('--data', type=str, default='data/data.yaml', help='data.yaml path')
 ```
 
-For certain modules and network structures in the improved model, you can find the defined functions in common.py under the path yolov7-dfc/models, as well as in loss.py and general.py under yolov7-dfc/utils. By modifying these files, you can replace corresponding modules and adjust the structure to implement other customized operations.
+
 
 
 To use UA-DETRAC dataset (download) or other datasets, please change the of data.yaml in yolov7-dfc/data
@@ -57,6 +57,23 @@ nc: 4
 
 # class names
 names: ['car', 'bus', 'van','others']
+```
+
+For certain modules and network structures in the improved model, you can find the defined functions in common.py under the path yolov7-dfc/models, as well as in loss.py and general.py under yolov7-dfc/utils. By modifying these files, you can replace corresponding modules and adjust the structure to implement other customized operations.
+
+Our improvements have been defined in these locations:
+```shell
+# in common.py
+class Sim_DFC(nn.Module)
+      () 
+class BiFPN_Add2(nn.Module):
+      ()
+class BiFPN_Add3(nn.Module):
+      ()
+# in loss.py and general.py
+class ComputeLoss:
+      ()
+def bbox_iou()
 ```
 
 To train, run train.py, or run:
