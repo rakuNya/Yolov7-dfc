@@ -18,6 +18,8 @@ Implementation of paper - [YOLOv7: Trainable bag-of-freebies sets new state-of-t
 | ++Inner-shape IoU | **95**  |      **67.9%**       |  15.3  | 7.56M      |
 | +++BiFPN          | **104** |      **70.0%**       |  14.8  | 7.46M      |
 
+The result above is by UA-DETRAC dataset.
+
 Our trained weight can be found in yolov7-dfc/improvedModel 
 ## Installation
 The model has been tested and confirmed to run successfully in the following environment:
@@ -35,7 +37,7 @@ For other virtual environments or hardware configurations with similar versions,
 Specifically, you can view or apply our improved model by accessing the dfc-nn.yaml file under the path yolov7-dfc/cfg/deploy. This .yaml file can be called during training in train.py, where you may also select the appropriate dataset to test the model’s performance. Use UA-DETRAC dataset by default
 
 ``` shell
-## in line 530
+## in line 530 of train.py
 parser.add_argument('--cfg', type=str, default='cfg/deploy/dfc-nn.yaml', help='model.yaml path')
 parser.add_argument('--data', type=str, default='data/data.yaml', help='data.yaml path')
 ```
@@ -61,15 +63,35 @@ To train, run train.py, or run:
 ```shell
 python train.py --workers 8 --batch-size 16 --data data/data.yaml --img 640 640 --weights '' 
 ```
+The trained weights will be saved in runs/train/,where you need to find the best.pt file as the final weight.
+Don't forget to set training epoch, it could lead to varies training results.
 
-To test, run test.py, be cautious with the weight you choose. 
+```shell
+# in line 533
+parser.add_argument('--epochs', type=int, default=100)
+```
+
+To test,  be cautious with the weight you choose. 
 ```shell
 python test.py --data data/data.yaml --img 640 --batch 32 --weights improvedModel/weight.pt 
 ```
 
-To inference, run detect.py, pay attention to the source file.
+Or you can choose the path of weight in test.py:
+```shell
+# in line 293 of test.py
+parser.add_argument('--weights', nargs='+', type=str, default='improvedModel/weight.pt', help='model.pt path(s)')
+```
+and run test.py. 
+
+To inference, pay attention to the source file.
 ```shell
 python detect.py --weights improvedModel/weight.pt  --source yourvideo.mp4
 ```
 
+Or run detect.py with changes in code:
+```shell
+# in line 168, 169
+parser.add_argument('--weights', nargs='+', type=str, default='improvedModel/weight.pt', help='model.pt path(s)')
+parser.add_argument('--source', type=str, default='inference/image', help='source')
+```
 
