@@ -479,7 +479,7 @@ class ComputeLoss:
 
 
 
-                # inner shape iou
+                # inner shape iou       -by raku
                 obj_sz = (tobj.size()[2], tobj.size()[3])
                 iou = bbox_iou(pbox, tbox[i], feat_sz=obj_sz, shape_iou=True, scale=1.2,eps=1e-7)
                 if isinstance(iou, tuple):

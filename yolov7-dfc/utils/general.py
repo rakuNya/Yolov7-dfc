@@ -518,11 +518,11 @@ def bbox_iou(box1,
 
             # Shape-IoU    #Shape-IoU    #Shape-IoU    #Shape-IoU    #Shape-IoU    #Shape-IoU    #Shape-IoU    #Shape-IoU    #Shape-IoU
 
-            return inner_iou - distance - 0.5 * (shape_cost)  # IoU
+            return inner_iou - distance - 0.5 * (shape_cost)  # IoU     Inner shape
         return inner_iou - torch.pow((c_area - union) / c_area + eps,
                                      alpha)  # GIoU https://arxiv.org/pdf/1902.09630.pdf
     return iou  # IoU
-
+ #by raku
 
 class WIoU_Scale:
     """
